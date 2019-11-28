@@ -4,33 +4,81 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 
 function App() {
-  return (
-    <div className="App">
-      <textarea>Pauet,Gonsal,Mario,Pepelu,Alex,Paco</textarea>
-      <button>Randomize</button>
+  const state = {
+    winners: null,
+    tournament: [
+      [
+        ["Pauet & Gonsal", "Mario & Pepelu"],
+        null,
+        ["Paco & Manolo", "Moko & Pepelu"],
+        null,
+        ["Caco & Pepe", "Peanut & Foo"],
+        null,
+        ["Loko & Alex", "Koko & Ble"]
+      ],
+      [null, ["? & ?", "? & ?"], null, null, null, ["? & ?", "? & ?"], null],
+      [null, null, null, ["? & ?", "? & ?"], null, null, null]
+    ]
+  };
 
-      <div className="table">
-        <div className="slot arrow-down">1</div>
-        <div className="slot">2</div>
-        <div />
-        <div />
-        <div className="slot">3</div>
-        <div className="slot arrow-up">4</div>
-
-        <div />
-        <div />
-        <div className="slot arrow-straight">5</div>
-        <div className="slot">6</div>
-        <div />
-
-        <div />
-        <div />
-        <div />
-        <div className="slot">7</div>
-        <div />
-        <div />
+  if (state.winners) {
+    return (
+      <div className="winners">
+        <div className="popup">
+          <h1>🎉 Winners! 🎉</h1>
+          <h2>{state.winners}</h2>
+          <span className="cup" role="img">
+            🏆
+          </span>
+        </div>
       </div>
-    </div>
+    );
+  }
+
+  return (
+    <>
+      <header className="header">
+        <h1>⚽ Title 🏆</h1>
+      </header>
+      <div className="randomizer">
+        <h3>Players:</h3>
+        <textarea>Pauet,Gonsal,Mario,Pepelu,Alex,Paco</textarea>
+        <button>Play</button>
+      </div>
+
+      <div className="App">
+        <div className="table">
+          {state.tournament.map(rounds =>
+            rounds.map(match => {
+              if (!match) {
+                return <div />;
+              }
+
+              return (
+                <div className="slot">
+                  {match.map(players => (
+                    <div className="team">{players}</div>
+                  ))}
+                </div>
+              );
+            })
+          )}
+        </div>
+      </div>
+      <footer className="crafted">
+        <h3>
+          Crafted with ❤️ using{" "}
+          <a title="reffects" href="#pepe">
+            reffects
+          </a>
+        </h3>
+        <img
+          src="https://emoji.slack-edge.com/T02AJ2PUS/reffects/bfc217d9857cd8b3.png"
+          alt="reffects logo"
+          height="40"
+        />
+      </footer>
+    </>
   );
 }
 
