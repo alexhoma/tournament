@@ -1,2 +1,0 @@
-# tournament
-Created with CodeSandbox

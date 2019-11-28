@@ -1,0 +1,52 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  grid-auto-flow: column;
+}
+
+.slot {
+  border: 1px solid;
+  position: relative;
+}
+
+.arrow-down::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  right: -45px;
+  height: 2px;
+  background: black;
+  bottom: 0;
+  transform: rotate(45deg);
+  transform-origin: bottom left;
+}
+
+.arrow-up::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  right: -45px;
+  height: 2px;
+  background: black;
+  top: 0;
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+}
+
+.arrow-straight::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  right: -30px;
+  height: 2px;
+  background: black;
+  bottom: 0;
+}
