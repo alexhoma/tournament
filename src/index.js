@@ -46,8 +46,14 @@ function App() {
         <button>Play</button>
       </div>
 
-      <div className="App">
-        <div className="table">
+      <div className="app">
+        <div
+          className="table"
+          style={{
+            gridTemplateColumns: `repeat(${state.tournament.length}, 1fr)`,
+            gridTemplateRows: `repeat(${state.tournament[0].length}, 1fr)`
+          }}
+        >
           {state.tournament.map(rounds =>
             rounds.map(match => {
               if (!match) {
@@ -65,6 +71,7 @@ function App() {
           )}
         </div>
       </div>
+
       <footer className="crafted">
         <h3>
           Crafted with ❤️ using{" "}
