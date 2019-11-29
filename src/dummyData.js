@@ -1,0 +1,72 @@
+const state = {
+  winners: null,
+  tournament: [
+    [
+      ["Pauet & Gonsal", "Mario & Pepelu"],
+      null,
+      ["Paco & Manolo", "Moko & Pepelu"],
+      null,
+      ["Caco & Pepe", "Peanut & Foo"],
+      null,
+      ["Loko & Alex", "Koko & Ble"],
+      null,
+      ["Pauet & Gonsal", "Mario & Pepelu"],
+      null,
+      ["Paco & Manolo", "Moko & Pepelu"],
+      null,
+      ["Caco & Pepe", "Peanut & Foo"],
+      null,
+      ["Loko & Alex", "Koko & Ble"]
+    ],
+    [
+      null,
+      ["? & ?", "? & ?"],
+      null,
+      null,
+      null,
+      ["? & ?", "? & ?"],
+      null,
+      null,
+      null,
+      ["? & ?", "? & ?"],
+      null,
+      null,
+      null,
+      ["? & ?", "? & ?"],
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      ["? & ?", "? & ?"],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      ["? & ?", "? & ?"],
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      ["? & ?", "? & ?"],
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  ]
+};
